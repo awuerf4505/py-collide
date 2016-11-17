@@ -83,7 +83,16 @@ while not done:
     
     if case == 1:
         ''' if the block is moved out of the window, nudge it back on. '''
-        pass
+        if top < 0:
+            block[1] = 0
+        elif bottom > height:
+             block[1] = height - block[3]
+
+        if left < 0:
+            block[0] = 0
+        elif right > width:
+            block[0] = width - block[2]
+            
 
     
     elif case == 2:
